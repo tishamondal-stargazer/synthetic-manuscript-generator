@@ -21,7 +21,7 @@ SCRIPTS = {
         "folder": "modi",
     },
     "Sharada": {
-        "source": PROJECT_DIR / "sources" / "sharada_md.md",
+        "source": PROJECT_DIR / "sources" / "sharada_md.part01",
         "font": str(PROJECT_DIR / "fonts" / "NotoSansSharada-Regular.ttf"),
         "folder": "sharada",
     },
