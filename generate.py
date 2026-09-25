@@ -34,9 +34,22 @@ SEED = 42
 
 
 def load_passages(path):
+    # Sharada source is stored in three parts.
+    if path.name == "sharada_md.part01":
+        parts = [
+            path,
+            path.with_name("sharada_md.part02"),
+            path.with_name("sharada_md.part03"),
+        ]
+        text = "".join(
+            part.read_text(encoding="utf-8") for part in parts
+        )
+    else:
+        text = path.read_text(encoding="utf-8")
+
     lines = [
         line.strip()
-        for line in path.read_text(encoding="utf-8").splitlines()
+        for line in text.splitlines()
         if line.strip() and not line.strip().startswith("#")
     ]
 
