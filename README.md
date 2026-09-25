@@ -60,3 +60,9 @@ Total: 300 images and 300 Markdown annotations.
 ## Note
 
 This is a synthetic dataset for experimentation and research. It is not a collection of historical manuscript scans.
+
+## Dataset
+
+The generated dataset is publicly available on Hugging Face:
+
+[View the Synthetic Manuscript Generator Dataset](https://huggingface.co/datasets/tisha-mondal/synthetic-manuscript-generator)
