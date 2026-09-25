@@ -1,13 +1,13 @@
 
 # Synthetic Manuscript Generator
 
-A Python-based project for generating synthetic manuscript-style page images and Markdown annotations in Devanagari, Modi, and Sharada scripts.
+A Python project that generates synthetic manuscript-style images and Markdown annotations in Devanagari, Modi, and Sharada scripts.
 
-The project creates aged-paper manuscript pages with decorative borders, script-specific text, and corresponding Markdown annotations. It includes the source text files, fonts, and generator code required to reproduce the dataset.
+The project creates manuscript-style pages with aged-paper textures, decorative borders, script-specific text, and corresponding Markdown annotations.
 
 ## Dataset
 
-The generated dataset contains 300 synthetic manuscript images across three scripts:
+This project contains 300 generated images across three scripts:
 
 | Script | Train | Validation | Test | Total |
 |---|---:|---:|---:|---:|
@@ -18,21 +18,20 @@ The generated dataset contains 300 synthetic manuscript images across three scri
 
 Each image has a corresponding Markdown annotation containing metadata, source text, and rendered lines.
 
-The dataset is available on Hugging Face:
+The generated dataset is publicly available on Hugging Face:
 
-**[View the Synthetic Manuscript Generator Dataset](https://huggingface.co/datasets/tisha-mondal/synthetic-manuscript-generator)**
+[View the Synthetic Manuscript Generator Dataset](https://huggingface.co/datasets/tisha-mondal/synthetic-manuscript-generator)
 
 ## Features
 
 - Synthetic manuscript-style page generation
-- Three Indic scripts: Devanagari, Modi, and Sharada
+- Support for Devanagari, Modi, and Sharada scripts
 - Aged-paper appearance with subtle texture and stains
-- Decorative page borders and folio titles
+- Traditional decorative page borders
 - Script-specific fonts
 - Variation in ink colour
-- Markdown annotations for generated images
+- PNG images with Markdown annotations
 - Separate training, validation, and test splits
-- Reusable Python generator
 
 ## Repository Structure
 
@@ -53,11 +52,11 @@ synthetic-manuscript-generator/
 └── synthetic-manuscript-source.zip
 ```
 
-The Sharada source text is stored in three parts because of file-size limitations. The generator reads these parts together.
+The Sharada source text is stored in three parts because of file-size limitations. The generator reads the parts together.
 
 ## Generated Dataset Structure
 
-Running the generator creates the following dataset structure:
+Running the generator creates the following structure:
 
 ```text
 dataset/
@@ -75,7 +74,7 @@ dataset/
     └── test/
 ```
 
-Each split folder contains PNG manuscript images and their matching Markdown annotation files.
+Each split folder contains PNG images and matching Markdown annotation files.
 
 ## Requirements
 
@@ -88,11 +87,11 @@ Install the required Python library:
 pip install pillow
 ```
 
-## Run the Generator
+## Run
 
 1. Clone or download this repository.
 2. Open a terminal in the project directory.
-3. Install the required library.
+3. Install the required library using the command above.
 4. Run the generator:
 
 ```bash
@@ -112,12 +111,9 @@ The generated dataset was checked for the expected split counts and valid PNG fi
 - Validation split: 10 images per script
 - Test split: 5 images per script
 
-## Notes
+## Note
 
-- This is a synthetic dataset created for experimentation and research.
-- The generated images are not historical manuscript scans.
-- The repository contains the generator code, fonts, and source text files.
-- The complete generated dataset is hosted on Hugging Face.
+This is a synthetic dataset created for experimentation and research. It is not a collection of historical manuscript scans.
 
 ## Links
 
