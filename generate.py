@@ -37,7 +37,7 @@ def load_passages(path):
             path.with_name("sharada_md.part02"),
             path.with_name("sharada_md.part03"),
         ]
-        text = "".join(
+        text = "\n".join(
             part.read_text(encoding="utf-8") for part in parts
         )
     else:
